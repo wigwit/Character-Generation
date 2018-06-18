@@ -1,0 +1,17 @@
+#include "character.h"
+
+character::character(QObject *parent) : QObject(parent)
+{
+    
+}
+
+void character::addImage(const QPixmap & new_image)
+{
+    image.append(new_image);
+}
+
+void character::addIndex(const QString & new_index)
+{
+ index.append(new_index);   
+}
+
