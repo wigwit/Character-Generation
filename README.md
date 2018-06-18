@@ -10,4 +10,6 @@ As my project progressed, I found out that it is better to first establish a cla
 
 Another problem that I left unsloved is the display of my image. I could not someshow change my png images to transparent backgroun. Therefore, there are some problems of showing the actual design.
 
-Also I tried to use generic algorithm to enhace my code, under character.cpp, I use std::find_if in the public slots function set_Label
+Also I tried to use generic algorithm to enhace my code, under character.cpp, I use std::find_if in the public slots function set_Label.
+
+I failed using generic algorithm in my mainwindow.cpp, since it says my feature constructors are overloaded and the compiler could not decide which one to use.

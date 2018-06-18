@@ -19,6 +19,7 @@ public:
     int size() const;
     QString get_name(int pos) const;
 
+
 signals:
 
 public slots:

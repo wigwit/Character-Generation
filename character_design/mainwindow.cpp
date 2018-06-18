@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
+#include <QtAlgorithms>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -22,15 +22,18 @@ MainWindow::~MainWindow()
 
 void MainWindow::setCharacter()
 {
-    skin =new character(this,ui->skin_label);
 
-    //  I tried to reimplement this part with pointer
-    //However, it does not work well with resource file
-    // However, i feel like this part could reimplemented into generic algorithm
+    skin =new character(this,ui->skin_label);
     skin->addfeature(new feature(skin,"dark",":/skin/character pics/dark_skin.png"));
     skin->addfeature(new feature(skin,"medium",":/skin/character pics/medium_skin.png"));
     skin->addfeature(new feature(skin,"light",":/skin/character pics/light_skin.png"));
-
+// I am trying to rewrite the part above with generic algorithm
+//    QList<std::pair<QString,QString>> skin_list;
+//    skin_list.append(std::pair<QString,QString>("dark",":/skin/character pics/dark_skin.png"));
+//    skin_list.append(std::pair<QString,QString>("medium",":/skin/character pics/medium_skin.png"));
+//    skin_list.append(std::pair<QString,QString>("light",":/skin/character pics/light_skin.png"));
+//    std::for_each(skin_list.begin(),skin_list.end(),skin->addfeature(new feature(skin)));
+// this is a little bit problematic since the two constructors are overloaded
 
     hair=new character(this,ui->hat_label);
     hair->addfeature(new feature(hair,"black",":/hair/character pics/black_hair.png"));

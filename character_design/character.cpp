@@ -2,7 +2,6 @@
 #include <QtAlgorithms>
 character::character(QObject *parent,QLabel* label) : QObject(parent),show(label)
 {
-
 }
 
 
@@ -42,5 +41,8 @@ QString character::get_name(int pos) const
 {
     return property[pos]->getName();
 }
+
+
+
 
 
