@@ -9,3 +9,5 @@ The next problem is how to connect my image with the property. How do I directly
 As my project progressed, I found out that it is better to first establish a class called that stores information of feature and an image, then form a list of the class called feature. In this way, I bind two things in the same list instead of building two lists
 
 Another problem that I left unsloved is the display of my image. I could not someshow change my png images to transparent backgroun. Therefore, there are some problems of showing the actual design.
+
+Also I tried to use generic algorithm to enhace my code, under character.cpp, I use std::find_if in the public slots function set_Label

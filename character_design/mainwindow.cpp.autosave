@@ -23,7 +23,7 @@ MainWindow::~MainWindow()
 void MainWindow::setCharacter()
 {
     skin =new character(this,ui->skin_label);
-
+   
     //  I tried to reimplement this part with pointer
     //However, it does not work well with resource file
     // However, i feel like this part could reimplemented into generic algorithm

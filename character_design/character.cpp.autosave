@@ -19,14 +19,7 @@ void character::setComboBox(QComboBox* box)
 
 void character::setLabel(const QString & name)
 {
-//    for(int i=0;i<size();i++)
-//    {
-//        if (property[i]->getName()==name)
-//        {
-
-//            show->setPixmap(property[i]->getImage());
-//        }
-//    }
+    // reimplemented with generic algorithm
     auto position=std::find_if(property.begin(),property.end()
                  ,[=](feature* input){return (name==input->getName());});
     show->setPixmap((*position)->getImage());
