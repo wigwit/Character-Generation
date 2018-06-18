@@ -31,7 +31,7 @@ class Ui_MainWindow
 public:
     QWidget *centralWidget;
     QLabel *skin_label;
-    QLabel *hair;
+    QLabel *hair_label;
     QLabel *mood_label;
     QLabel *hat_label;
     QWidget *widget;
@@ -56,21 +56,21 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(647, 328);
+        MainWindow->resize(811, 467);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         skin_label = new QLabel(centralWidget);
         skin_label->setObjectName(QStringLiteral("skin_label"));
-        skin_label->setGeometry(QRect(270, 40, 211, 201));
-        hair = new QLabel(centralWidget);
-        hair->setObjectName(QStringLiteral("hair"));
-        hair->setGeometry(QRect(290, 20, 101, 81));
+        skin_label->setGeometry(QRect(270, 40, 481, 381));
+        hair_label = new QLabel(centralWidget);
+        hair_label->setObjectName(QStringLiteral("hair_label"));
+        hair_label->setGeometry(QRect(290, 20, 321, 161));
         mood_label = new QLabel(centralWidget);
         mood_label->setObjectName(QStringLiteral("mood_label"));
-        mood_label->setGeometry(QRect(330, 150, 51, 31));
+        mood_label->setGeometry(QRect(420, 270, 181, 81));
         hat_label = new QLabel(centralWidget);
         hat_label->setObjectName(QStringLiteral("hat_label"));
-        hat_label->setGeometry(QRect(340, 30, 61, 41));
+        hat_label->setGeometry(QRect(340, 30, 301, 161));
         widget = new QWidget(centralWidget);
         widget->setObjectName(QStringLiteral("widget"));
         widget->setGeometry(QRect(20, 20, 191, 231));
@@ -146,7 +146,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 647, 17));
+        menuBar->setGeometry(QRect(0, 0, 811, 17));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -163,10 +163,10 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
-        skin_label->setText(QApplication::translate("MainWindow", "TextLabel", 0));
-        hair->setText(QApplication::translate("MainWindow", "TextLabel", 0));
-        mood_label->setText(QApplication::translate("MainWindow", "TextLabel", 0));
-        hat_label->setText(QApplication::translate("MainWindow", "TextLabel", 0));
+        skin_label->setText(QApplication::translate("MainWindow", "skin", 0));
+        hair_label->setText(QApplication::translate("MainWindow", "hair", 0));
+        mood_label->setText(QApplication::translate("MainWindow", "mood", 0));
+        hat_label->setText(QApplication::translate("MainWindow", "hat", 0));
         label->setText(QApplication::translate("MainWindow", "Skin ", 0));
         label_2->setText(QApplication::translate("MainWindow", "Hair", 0));
         label_4->setText(QApplication::translate("MainWindow", "Hat", 0));

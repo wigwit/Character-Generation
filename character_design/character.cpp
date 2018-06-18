@@ -5,42 +5,38 @@ character::character(QObject *parent,QLabel* label) : QObject(parent),show(label
 
 }
 
-void character::addImage(const QString & address)
+
+void character::addfeature( feature* new_feature)
 {
-    QPixmap new_image(address);
-    image.append(new_image);
+    property.append(new_feature);
 }
 
 void character::setComboBox(QComboBox* box)
 {
- box->addItems(index);
+    for(int i=0;i<size();i++)
+        box->addItem(property[i]->getName());
 }
 
 void character::setLabel(const QString & name)
 {
     for(int i=0;i<size();i++)
     {
-        if (index[i]==name)
+        if (property[i]->getName()==name)
         {
-            int w=show->width();
-            int h=show->height();
-            show->setPixmap(image[i]);
+
+            show->setPixmap(property[i]->getImage());
         }
     }
 }
 
 int character::size() const
 {
-    return image.size();
+    return property.size();
 }
 
 QString character::get_name(int pos) const
 {
-    return index[pos];
+    return property[pos]->getName();
 }
 
-void character::addIndex(const QString & new_index)
-{
- index.append(new_index);
-}
 

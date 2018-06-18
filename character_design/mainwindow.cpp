@@ -25,36 +25,28 @@ void MainWindow::setCharacter()
 
     //  I tried to reimplement this part with pointer
     //However, it does not work well with resource file
-    skin->addImage(":/skin/character pics/dark_skin.png");
-    skin->addIndex("dark");
-    skin->addImage(":/skin/character pics/medium_skin.png");
-    skin->addIndex("medium");
-    skin->addImage(":/skin/character pics/light_skin.png");
-    skin->addIndex("light");
+    // However, i feel like this part could reimplemented into generic algorithm
+    skin->addfeature(new feature(skin,"dark",":/skin/character pics/dark_skin.png"));
+    skin->addfeature(new feature(skin,"medium",":/skin/character pics/medium_skin.png"));
+    skin->addfeature(new feature(skin,"light",":/skin/character pics/light_skin.png"));
+
 
     hair=new character(this,ui->hat_label);
-    hair->addImage(":/hair/character pics/black_hair.png");
-    hair->addIndex("black");
-    hair->addImage(":/hair/character pics/purple_hair.png");
-    hair->addIndex("purple");
-    hair->addImage(":/hair/character pics/brown_hair.png");
-    hair->addIndex("brown");
-    hair->addImage(":/hair/character pics/pink_hair.png");
-    hair->addIndex("pink");
+    hair->addfeature(new feature(hair,"black",":/hair/character pics/black_hair.png"));
+    hair->addfeature(new feature(hair,"purple",":/hair/character pics/purple_hair.png"));
+    hair->addfeature(new feature(hair,"brown",":/hair/character pics/brown_hair.png"));
+    hair->addfeature(new feature(hair,"pink",":/hair/character pics/pink_hair.png"));
+
 
     mood=new character (this,ui->mood_label);
-    mood->addImage(":/mood/character pics/happy_mood.png");
-    mood->addIndex("happy");
-    mood->addImage(":/mood/character pics/sad_mood.png");
-    mood->addIndex("sad");
+    mood->addfeature(new feature(mood,"happy",":/mood/character pics/happy_mood.png"));
+    mood->addfeature(new feature(mood,"sad",":/mood/character pics/sad_mood.png"));
+
 
     hat=new character(this,ui->hat_label);
-    hat->addImage(":/hat/character pics/black_hat.png");
-    hat->addIndex("black");
-    hat->addImage(":/hat/character pics/green_hat.png");
-    hat->addIndex("green");
-    hat->addImage(":/hat/character pics/red_hat.png");
-    hat->addIndex("red");
+    hat->addfeature(new feature(hat,"balck",":/hat/character pics/black_hat.png"));
+    hat->addfeature(new feature(hat,"green",":/hat/character pics/green_hat.png"));
+    hat->addfeature(new feature(hat,"red",":/hat/character pics/red_hat.png"));
 }
 
 void MainWindow::setComboBox()

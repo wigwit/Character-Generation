@@ -7,14 +7,14 @@
 #include<QList>
 #include <QComboBox>
 #include<QLabel>
+#include "feature.h"
+
 class character : public QObject
 {
-//    Q_PROPERTY(QPixmap feature READ feature WRITE setFeature NOTIFY featureChanged)
     Q_OBJECT
 public:
     explicit character(QObject *parent = nullptr,QLabel* label= new QLabel);
-    void addIndex(const QString&);// note: index and image must match for each other
-    void addImage(const QString&);
+    void addfeature(feature*);
     void setComboBox(QComboBox* );
     int size() const;
     QString get_name(int pos) const;
@@ -24,8 +24,7 @@ signals:
 public slots:
     void setLabel(const QString &);
 private:
-    QList<QString> index;
-    QList<QPixmap> image;
+    QList<feature*> property;
     QLabel* show;
 
 };

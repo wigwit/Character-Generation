@@ -1,9 +1,0 @@
-#include "feature.h"
-
-feature::feature(QObject *parent, QString new_name, QString new_address) : QObject(parent),name(new_name)
-{
-
-    image=QPixmap(new_address);
-
-}
-
