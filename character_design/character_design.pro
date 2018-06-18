@@ -37,3 +37,5 @@ FORMS += \
 
 RESOURCES += \
     character_pics.qrc
+
+QMAKE_CXXFLAGS += -std=c++0x

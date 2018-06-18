@@ -1,22 +1,46 @@
 #include "character.h"
 
-character::character(QObject *parent) : QObject(parent)
+character::character(QObject *parent,QLabel* label) : QObject(parent),show(label)
 {
 
 }
 
-void character::setColor(const String &somecolor)
+void character::addImage(const QString & address)
 {
-    name=somecolor;
+    QPixmap new_image(address);
+    image.append(new_image);
 }
 
-QString character::getColor() const
+void character::setComboBox(QComboBox* box)
 {
-    return name;
+ box->addItems(index);
 }
 
-QLabel character::setFeature()
+void character::setLabel(const QString & name)
 {
-    QLabel image;
-    image.setPixmap(&feature);
+    for(int i=0;i<size();i++)
+    {
+        if (index[i]==name)
+        {
+            int w=show->width();
+            int h=show->height();
+            show->setPixmap(image[i]);
+        }
+    }
 }
+
+int character::size() const
+{
+    return image.size();
+}
+
+QString character::get_name(int pos) const
+{
+    return index[pos];
+}
+
+void character::addIndex(const QString & new_index)
+{
+ index.append(new_index);
+}
+
