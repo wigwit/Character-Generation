@@ -18,5 +18,5 @@ QString character::getColor() const
 QLabel character::setFeature()
 {
     QLabel image;
-    image.setPixmap(feature);
+    image.setPixmap(&feature);
 }
