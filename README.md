@@ -70,3 +70,6 @@ I also tried to use std::for_each for my initialization of the four characters i
 Problem Left Unsolved
 Problem that I left unsloved is the display of my image. I could not someshow change my png images to transparent backgroun. Therefore, there are some problems of showing the actual fitted design.
 
+The structure of the character widget is inspired by this youtube video
+https://www.youtube.com/watch?v=un2yEFL47ng
+
