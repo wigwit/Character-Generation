@@ -67,11 +67,20 @@ I also tried to use std::for_each for my initialization of the four characters i
 
 
 
+
 Problem Left Unsolved
+
 Problem that I left unsloved is the display of my image. I could not someshow change my png images to transparent background. Therefore, there are some problems of showing the actual fitted design.
 
-Possible Improvement:
+
+
+
+Possible Improvement
+
 It might be better to use the built-in QPainter to do the painting instead of importing from other resources.
+
+
+
 
 The structure of the character widget is inspired by this youtube video
 https://www.youtube.com/watch?v=un2yEFL47ng
